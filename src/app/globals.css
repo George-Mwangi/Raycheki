@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+body {
+  background: #fff;
+  color: #1F2937;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: "Archivo", sans-serif; letter-spacing: -0.02em; line-height: 1.06; }
+
+.hazard-stripe {
+  height: 6px;
+  background: repeating-linear-gradient(135deg, #1F2937 0 14px, #FF6B00 14px 28px);
+}
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: "IBM Plex Mono", monospace; text-transform: uppercase;
+  letter-spacing: .14em; font-size: .72rem; font-weight: 600; color: #FF6B00;
+}
+.eyebrow::before { content: ""; width: 30px; height: 2px; background: #FF6B00; }
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(225,228,232,.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(225,228,232,.6) 1px, transparent 1px);
+  background-size: 46px 46px;
+}
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px);} to { opacity: 1; transform: none; } }
+.animate-fade-up { animation: fadeUp .6s ease both; }
+
+.link-underline { background-image: linear-gradient(#FF6B00,#FF6B00); background-size: 0 2px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .25s; }
+.link-underline:hover { background-size: 100% 2px; }
